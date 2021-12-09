@@ -1,0 +1,5 @@
+#include <stdio>
+
+/* convert fahrenheitdata to celciusdata
+   where the fahrenheitdata = lower, lower+step, ... upper
+*/

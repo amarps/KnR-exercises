@@ -1,0 +1,32 @@
+#include <stdio.h>
+
+
+# define constant
+
+/* count digit, whitespaces and other */
+/* other != digit  %d, && whitespaces */
+int main()
+{
+    int c, i, nwhite, nother;
+    int ndigit[10];
+
+    for (i = 0; i < 10; ++i) {
+	ndigit[i] = 0;
+    }
+
+    while ((c = getchar()) != EOF) {
+      if (c == '\t' || c == ' ') {
+	  nwhite++;
+      } else if (c >= '0' && c <= '9') {
+	  ++ndigit[c-'0'];
+      } else {
+	  nother++;
+      }
+      printf("digit: ");
+      for (i = 0; i < 10; ++i) {
+	  printf("%d, ", ndigit[i]);
+      }
+    }
+
+    return 0;
+}
